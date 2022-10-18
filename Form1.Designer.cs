@@ -67,7 +67,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(426, 21);
+            this.label1.Location = new System.Drawing.Point(430, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(324, 46);
             this.label1.TabIndex = 1;
@@ -325,8 +325,11 @@
             this.Controls.Add(this.txtNCuenta);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvContribuyentes);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Contribuyentes";
             ((System.ComponentModel.ISupportInitialize)(this.dgvContribuyentes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
