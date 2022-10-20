@@ -54,10 +54,12 @@
             // 
             // dgvContribuyentes
             // 
+            this.dgvContribuyentes.AllowUserToAddRows = false;
             this.dgvContribuyentes.BackgroundColor = System.Drawing.Color.Black;
             this.dgvContribuyentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvContribuyentes.Location = new System.Drawing.Point(501, 254);
             this.dgvContribuyentes.Name = "dgvContribuyentes";
+            this.dgvContribuyentes.ReadOnly = true;
             this.dgvContribuyentes.Size = new System.Drawing.Size(654, 420);
             this.dgvContribuyentes.TabIndex = 0;
             // 
@@ -286,6 +288,7 @@
             this.btnCargar.TabIndex = 20;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = false;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // btnBorrar
             // 
@@ -299,6 +302,7 @@
             this.btnBorrar.TabIndex = 21;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = false;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // Form1
             // 
