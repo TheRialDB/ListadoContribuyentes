@@ -99,15 +99,15 @@ namespace ListadoContribuyentes
         //Guardamos los datos en un archivo xml.
         private void GuardarDatos() 
         {
-            dtContribuyentes.WriteXml(@"D:\Vs2022\IEFI\DatosContribuyentes.xml");
+            dtContribuyentes.WriteXml(@"C:\Users\Usuario\source\repos\ListadoContribuyentes\DatosContribuyentes.xml");
         }
 
         //Lee los datos ya cargados en el xml.
         private void LeerDatos()
         {
-            if (System.IO.File.Exists(@"D:\Vs2022\IEFI\DatosContribuyentes.xml"))
+            if (System.IO.File.Exists(@"C:\Users\Usuario\source\repos\ListadoContribuyentes\DatosContribuyentes.xml"))
             {
-                dtContribuyentes.ReadXml(@"D:\Vs2022\IEFI\DatosContribuyentes.xml");
+                dtContribuyentes.ReadXml(@"C:\Users\Usuario\source\repos\ListadoContribuyentes\DatosContribuyentes.xml");
             }
         }
     }
