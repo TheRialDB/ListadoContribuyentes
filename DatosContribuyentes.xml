@@ -1,24 +1,91 @@
 <?xml version="1.0" standalone="yes"?>
 <DocumentElement>
   <Contribuyentes>
-    <N_x00BA__x0020_de_x0020_Cuenta> 4245345</N_x00BA__x0020_de_x0020_Cuenta>
-    <Nombre>ERF</Nombre>
-    <Deuda>121</Deuda>
-    <Mes_x0020_Pago>Marzo</Mes_x0020_Pago>
+
+    <N_x00BA__x0020_de_x0020_Cuenta>7358</N_x00BA__x0020_de_x0020_Cuenta>
+    <Nombre>Romanutti Orlando</Nombre>
+    <Deuda>0.00</Deuda>
+    <Mes_x0020_Pago>Abril</Mes_x0020_Pago>
     <Plan_x0020_de_x0020_pago>SI</Plan_x0020_de_x0020_pago>
   </Contribuyentes>
   <Contribuyentes>
-    <N_x00BA__x0020_de_x0020_Cuenta>456456</N_x00BA__x0020_de_x0020_Cuenta>
-    <Nombre>fgxhhft</Nombre>
-    <Deuda>4465</Deuda>
+    <N_x00BA__x0020_de_x0020_Cuenta>6359</N_x00BA__x0020_de_x0020_Cuenta>
+    <Nombre>Gonzalez Alejandro</Nombre>
+    <Deuda>0.00</Deuda>
+    <Mes_x0020_Pago>Mayo</Mes_x0020_Pago>
+    <Plan_x0020_de_x0020_pago>NO</Plan_x0020_de_x0020_pago>
+  </Contribuyentes>
+  <Contribuyentes>
+    <N_x00BA__x0020_de_x0020_Cuenta>2487</N_x00BA__x0020_de_x0020_Cuenta>
+    <Nombre>Cragnolini Raul</Nombre>
+    <Deuda>0.00</Deuda>
+    <Mes_x0020_Pago>Enero</Mes_x0020_Pago>
+    <Plan_x0020_de_x0020_pago>NO</Plan_x0020_de_x0020_pago>
+  </Contribuyentes>
+  <Contribuyentes>
+    <N_x00BA__x0020_de_x0020_Cuenta>2390</N_x00BA__x0020_de_x0020_Cuenta>
+    <Nombre>Baudino Paola Judith</Nombre>
+    <Deuda>0.00</Deuda>
+    <Mes_x0020_Pago>Mayo</Mes_x0020_Pago>
+    <Plan_x0020_de_x0020_pago>SI</Plan_x0020_de_x0020_pago>
+  </Contribuyentes>
+  <Contribuyentes>
+    <N_x00BA__x0020_de_x0020_Cuenta>1875</N_x00BA__x0020_de_x0020_Cuenta>
+    <Nombre>Morales Vanesa Ines</Nombre>
+    <Deuda>0.00</Deuda>
+    <Mes_x0020_Pago>Febrero</Mes_x0020_Pago>
+    <Plan_x0020_de_x0020_pago>NO</Plan_x0020_de_x0020_pago>
+  </Contribuyentes>
+  <Contribuyentes>
+    <N_x00BA__x0020_de_x0020_Cuenta> 3943</N_x00BA__x0020_de_x0020_Cuenta>
+    <Nombre>Jimenez Valeria Natalia</Nombre>
+    <Deuda>1542</Deuda>
+    <Mes_x0020_Pago>Mayo</Mes_x0020_Pago>
+    <Plan_x0020_de_x0020_pago>SI</Plan_x0020_de_x0020_pago>
+  </Contribuyentes>
+  <Contribuyentes>
+    <N_x00BA__x0020_de_x0020_Cuenta>4951</N_x00BA__x0020_de_x0020_Cuenta>
+    <Nombre>Montes Ignacio Federico</Nombre>
+    <Deuda>654</Deuda>
+    <Mes_x0020_Pago>Febrero</Mes_x0020_Pago>
+    <Plan_x0020_de_x0020_pago>SI</Plan_x0020_de_x0020_pago>
+  </Contribuyentes>
+  <Contribuyentes>
+    <N_x00BA__x0020_de_x0020_Cuenta>4753</N_x00BA__x0020_de_x0020_Cuenta>
+    <Nombre>Arguello Maria Isabel</Nombre>
+    <Deuda>859</Deuda>
+    <Mes_x0020_Pago>Abril</Mes_x0020_Pago>
+    <Plan_x0020_de_x0020_pago>SI</Plan_x0020_de_x0020_pago>
+  </Contribuyentes>
+  <Contribuyentes>
+    <N_x00BA__x0020_de_x0020_Cuenta>3462</N_x00BA__x0020_de_x0020_Cuenta>
+    <Nombre>Ortiz Miguel Angel</Nombre>
+    <Deuda>8547</Deuda>
+    <Mes_x0020_Pago>Junio</Mes_x0020_Pago>
+    <Plan_x0020_de_x0020_pago>NO</Plan_x0020_de_x0020_pago>
+  </Contribuyentes>
+  <Contribuyentes>
+    <N_x00BA__x0020_de_x0020_Cuenta>2951</N_x00BA__x0020_de_x0020_Cuenta>
+    <Nombre>Perez David Santiago</Nombre>
+    <Deuda>214</Deuda>
+    <Mes_x0020_Pago>Marzo</Mes_x0020_Pago>
+    <Plan_x0020_de_x0020_pago>NO</Plan_x0020_de_x0020_pago>
+  </Contribuyentes>
+  <Contribuyentes>
+    <N_x00BA__x0020_de_x0020_Cuenta>1526</N_x00BA__x0020_de_x0020_Cuenta>
+    <Nombre>Garcia Pedro Ernesto</Nombre>
+    <Deuda>1258</Deuda>
+
     <Mes_x0020_Pago>Enero</Mes_x0020_Pago>
     <Plan_x0020_de_x0020_pago>SI</Plan_x0020_de_x0020_pago>
   </Contribuyentes>
   <Contribuyentes>
-    <N_x00BA__x0020_de_x0020_Cuenta> 312345</N_x00BA__x0020_de_x0020_Cuenta>
-    <Nombre>uiuiogl</Nombre>
-    <Deuda>24</Deuda>
-    <Mes_x0020_Pago>Febrero</Mes_x0020_Pago>
-    <Plan_x0020_de_x0020_pago>SI</Plan_x0020_de_x0020_pago>
+
+    <N_x00BA__x0020_de_x0020_Cuenta> 2414</N_x00BA__x0020_de_x0020_Cuenta>
+    <Nombre>Fernandez Julian Ezequiel </Nombre>
+    <Deuda>99999999999</Deuda>
+    <Mes_x0020_Pago>Julio</Mes_x0020_Pago>
+    <Plan_x0020_de_x0020_pago>NO</Plan_x0020_de_x0020_pago>
+
   </Contribuyentes>
 </DocumentElement>

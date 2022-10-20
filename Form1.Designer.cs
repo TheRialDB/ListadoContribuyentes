@@ -240,6 +240,7 @@
             this.btnReporte1.TabIndex = 14;
             this.btnReporte1.Text = "Reporte 1";
             this.btnReporte1.UseVisualStyleBackColor = false;
+            this.btnReporte1.Click += new System.EventHandler(this.btnReporte1_Click);
             // 
             // btnReporte2
             // 
@@ -252,6 +253,7 @@
             this.btnReporte2.TabIndex = 15;
             this.btnReporte2.Text = "Reporte 2";
             this.btnReporte2.UseVisualStyleBackColor = false;
+            this.btnReporte2.Click += new System.EventHandler(this.btnReporte2_Click);
             // 
             // btnReporte3
             // 
@@ -264,6 +266,7 @@
             this.btnReporte3.TabIndex = 16;
             this.btnReporte3.Text = "Reporte 3";
             this.btnReporte3.UseVisualStyleBackColor = false;
+            this.btnReporte3.Click += new System.EventHandler(this.btnReporte3_Click);
             // 
             // btnReporte4
             // 
@@ -276,6 +279,7 @@
             this.btnReporte4.TabIndex = 17;
             this.btnReporte4.Text = "Reporte 4";
             this.btnReporte4.UseVisualStyleBackColor = false;
+            this.btnReporte4.Click += new System.EventHandler(this.btnReporte4_Click);
             // 
             // btnReporte5
             // 
@@ -288,6 +292,7 @@
             this.btnReporte5.TabIndex = 18;
             this.btnReporte5.Text = "Reporte 5";
             this.btnReporte5.UseVisualStyleBackColor = false;
+            this.btnReporte5.Click += new System.EventHandler(this.btnReporte5_Click);
             // 
             // btnReporte6
             // 
@@ -300,6 +305,7 @@
             this.btnReporte6.TabIndex = 19;
             this.btnReporte6.Text = "Reporte 6";
             this.btnReporte6.UseVisualStyleBackColor = false;
+            this.btnReporte6.Click += new System.EventHandler(this.btnReporte6_Click);
             // 
             // btnCargar
             // 
