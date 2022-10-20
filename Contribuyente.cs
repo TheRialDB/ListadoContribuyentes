@@ -11,7 +11,7 @@ namespace ListadoContribuyentes
         //Atributos
         string numeroDeCuenta;
         string nombre;
-        string deuda;
+        decimal deuda;
         string mesPago;
         string planDePago;
 
@@ -24,7 +24,7 @@ namespace ListadoContribuyentes
         //Getters y Setters
         public string NumeroDeCuenta { get; set; }
         public string Nombre { get; set; }
-        public string Deuda { get; set; }
+        public decimal Deuda { get; set; }
         public string MesPago { get; set; }
         public string PlanDePago { get; set; }
     }
