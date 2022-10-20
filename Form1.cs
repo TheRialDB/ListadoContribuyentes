@@ -114,6 +114,7 @@ namespace ListadoContribuyentes
         private void GuardarDatos()
         {
             dtContribuyentes.WriteXml(DIRECCION_XML + "DatosContribuyentes.xml");
+
         }
 
         //Lee los datos ya cargados en el xml.
