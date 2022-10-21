@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="epvValidar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -124,7 +127,7 @@
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABJQAAAMACAYAAABy+j2eAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAA/7JJREFUeF7svQeYXcWRv62JygFlgYQAIXJSmCgJkaMAkQRIoIxyzlkiiSiRkUDk
+        vAAADrwBlbxySQAA/7JJREFUeF7svQeYXcWRv62JygFlgYQAIXJSmCgJkaMAkQRIoIxyzlkiiSiRkUDk
         nMEkm2AwwcZgAwYb47VxWIc19q7D/u3FeM1+9dWvqut0n3PPnRkFMEY9z/M+VV3d55w7DnNnXlX3bcZf
         FIlEIpFIJBKJRCKRSCQSiWwGucVIJBKJRCKRSCQSiUQikUikGLnFSCQSiUQikUgkEolEIpFIpBi5xUgk
         EolEIpFIJBKJRCKRSKQYucVIJBKJRCKRSCQSiUQikUikGLnFSCQSiXxBKWlWwhHkz0cikUgk8q9FiXtv
