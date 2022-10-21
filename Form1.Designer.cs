@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
@@ -51,7 +52,9 @@
             this.btnReporte6 = new System.Windows.Forms.Button();
             this.btnCargar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
+            this.epvValidar = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvContribuyentes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epvValidar)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvContribuyentes
@@ -109,7 +112,6 @@
             this.txtNCuenta.Name = "txtNCuenta";
             this.txtNCuenta.Size = new System.Drawing.Size(241, 26);
             this.txtNCuenta.TabIndex = 2;
-            this.txtNCuenta.Text = " ";
             // 
             // cmbMesPago
             // 
@@ -166,6 +168,7 @@
             this.txtDeuda.Name = "txtDeuda";
             this.txtDeuda.Size = new System.Drawing.Size(241, 26);
             this.txtDeuda.TabIndex = 8;
+            this.txtDeuda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDeuda_KeyPress);
             // 
             // label3
             // 
@@ -335,6 +338,11 @@
             this.btnBorrar.UseVisualStyleBackColor = false;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
+            // epvValidar
+            // 
+            this.epvValidar.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.epvValidar.ContainerControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -367,6 +375,7 @@
             this.Name = "Form1";
             this.Text = "Contribuyentes";
             ((System.ComponentModel.ISupportInitialize)(this.dgvContribuyentes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epvValidar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -394,6 +403,7 @@
         private System.Windows.Forms.Button btnReporte6;
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.Button btnBorrar;
+        private System.Windows.Forms.ErrorProvider epvValidar;
     }
 }
 

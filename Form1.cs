@@ -23,7 +23,9 @@ namespace ListadoContribuyentes
         const string REPORTE_6 = "Informe de los contribuyentes que realizaron un plan de pago y pagaron la deuda, pero no lo hicieron en el primer trimestre";
         const string ERROR_FILA = "Elija que fila quiere borrar.";
         const string DIRECCION_XML = @"C:\Users\Usuario\OneDrive\Escritorio\FACU\PROGRAMACIÓN\vs2022\ListadoContribuyentes\";
-
+        const string ERROR_NCUENTA_EXISTE = "Número de cuenta existente";
+        const string ERROR_COMAS = "No puede colocar más de una , (coma)";
+        
         public Form1()
         {
             InitializeComponent();
@@ -52,25 +54,49 @@ namespace ListadoContribuyentes
         //Boton para cargar contribuyentes en el Data Grid View.
         private void btnCargar_Click(object sender, EventArgs e)
         {
-            contribuyente.NumeroDeCuenta = txtNCuenta.Text;
-            contribuyente.Nombre = txtNombre.Text;
-            contribuyente.Deuda = Convert.ToDecimal(txtDeuda.Text);
-            contribuyente.MesPago = cmbMesPago.Text;
-            contribuyente.PlanDePago = cmbPlanDePago.Text;
+            epvValidar.Clear();
 
-            //Se cargan los contribuyentes en el Data Grid View.
-            dtContribuyentes.Rows.Add();
-            int i = dtContribuyentes.Rows.Count - 1;
+            if (Validar())
+            {
+                
+            }
+            else
+            {
+                int fila = BuscarCodigo(txtNCuenta.Text);
+                if (fila != -1)
+                {
+                    MessageBox.Show(ERROR_NCUENTA_EXISTE);
+                }
+                else
+                {
+                    if (ValidarComas(this.Controls))
+                    {
+                        MessageBox.Show(ERROR_COMAS);
+                    }
+                    else
+                    {
+                        contribuyente.NumeroDeCuenta = txtNCuenta.Text;
+                        contribuyente.Nombre = txtNombre.Text;
+                        contribuyente.Deuda = Convert.ToDecimal(txtDeuda.Text);
+                        contribuyente.MesPago = cmbMesPago.Text;
+                        contribuyente.PlanDePago = cmbPlanDePago.Text;
 
-            dtContribuyentes.Rows[i]["Nº de Cuenta"] = contribuyente.NumeroDeCuenta;
-            dtContribuyentes.Rows[i]["Nombre"] = contribuyente.Nombre;
-            dtContribuyentes.Rows[i]["Deuda"] = contribuyente.Deuda;
-            dtContribuyentes.Rows[i]["Mes Pago"] = contribuyente.MesPago;
-            dtContribuyentes.Rows[i]["Plan de pago"] = contribuyente.PlanDePago;
+                        //Se cargan los contribuyentes en el Data Grid View.
+                        dtContribuyentes.Rows.Add();
+                        int i = dtContribuyentes.Rows.Count - 1;
 
-            GuardarDatos();
-            LimpiarPantalla();
-            Blanquear();
+                        dtContribuyentes.Rows[i]["Nº de Cuenta"] = contribuyente.NumeroDeCuenta;
+                        dtContribuyentes.Rows[i]["Nombre"] = contribuyente.Nombre;
+                        dtContribuyentes.Rows[i]["Deuda"] = contribuyente.Deuda;
+                        dtContribuyentes.Rows[i]["Mes Pago"] = contribuyente.MesPago;
+                        dtContribuyentes.Rows[i]["Plan de pago"] = contribuyente.PlanDePago;
+
+                        GuardarDatos();
+                        LimpiarPantalla();
+                        Negrear();
+                    }
+                }               
+            }
         }
 
         //Boton para borrar contribuyentes en el Data Grid View.
@@ -85,7 +111,7 @@ namespace ListadoContribuyentes
                 dgvContribuyentes.Rows.Remove(dgvContribuyentes.CurrentRow);
                 GuardarDatos();
             }
-            Blanquear();
+            Negrear();
         }
 
         //Metodo para limpiar los TextBoxs y ComboBoxs.
@@ -98,15 +124,15 @@ namespace ListadoContribuyentes
             cmbPlanDePago.SelectedIndex = -1;
         }
         //Método para limpiar el datagridview
-        private void Blanquear()
+        private void Negrear()
         {
             for (int i = 0; i < dtContribuyentes.Rows.Count; i++)
             {
-                dgvContribuyentes.Rows[i].Cells[0].Style.BackColor = Color.White;
-                dgvContribuyentes.Rows[i].Cells[1].Style.BackColor = Color.White;
-                dgvContribuyentes.Rows[i].Cells[2].Style.BackColor = Color.White;
-                dgvContribuyentes.Rows[i].Cells[3].Style.BackColor = Color.White;
-                dgvContribuyentes.Rows[i].Cells[4].Style.BackColor = Color.White;
+                dgvContribuyentes.Rows[i].Cells[0].Style.BackColor = Color.FromArgb(64, 64, 64);
+                dgvContribuyentes.Rows[i].Cells[1].Style.BackColor = Color.FromArgb(64, 64, 64);
+                dgvContribuyentes.Rows[i].Cells[2].Style.BackColor = Color.FromArgb(64, 64, 64);
+                dgvContribuyentes.Rows[i].Cells[3].Style.BackColor = Color.FromArgb(64, 64, 64);
+                dgvContribuyentes.Rows[i].Cells[4].Style.BackColor = Color.FromArgb(64, 64, 64);
             }
         }
 
@@ -114,7 +140,6 @@ namespace ListadoContribuyentes
         private void GuardarDatos()
         {
             dtContribuyentes.WriteXml(DIRECCION_XML + "DatosContribuyentes.xml");
-
         }
 
         //Lee los datos ya cargados en el xml.
@@ -124,6 +149,95 @@ namespace ListadoContribuyentes
             {
                 dtContribuyentes.ReadXml(DIRECCION_XML + "DatosContribuyentes.xml");
             }
+        }
+
+        //Método validar
+        private bool Validar()
+        {
+            bool validar = false;
+
+            if (txtNCuenta.Text == "")
+            {
+                epvValidar.SetError(txtNCuenta, "llenar campo");
+                validar = true;
+            }
+            if (txtNombre.Text == "")
+            {
+                epvValidar.SetError(txtNombre, "llenar campo");
+                validar = true;
+            }
+            if (txtDeuda.Text == "")
+            {
+                epvValidar.SetError(txtDeuda, "llenar campo");
+                validar = true;
+            }
+            if (cmbMesPago.SelectedIndex == -1)
+            {
+                epvValidar.SetError(cmbMesPago, "llenar campo");
+                validar = true;
+            }
+            if (cmbPlanDePago.SelectedIndex == -1)
+            {
+                epvValidar.SetError(cmbPlanDePago, "llenar campo");
+                validar = true;
+            }
+            return validar;
+        }
+        //metodo para buscar codigo
+        public int BuscarCodigo(string code)
+        {
+            int fila = -1;
+
+            for (int i = 0; i < dtContribuyentes.Rows.Count; i++)
+            {
+                if (dtContribuyentes.Rows[i]["Nº de Cuenta"].ToString() == code)
+                {
+                    fila = i;
+                    break;
+                }
+            }
+
+            return fila;
+        }
+        //Validacion para solo cargar numeros txtdeuda
+        private void txtDeuda_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsNumber(e.KeyChar)) && (!char.IsControl(e.KeyChar) && (e.KeyChar != ',')))
+            {
+                e.Handled = true;
+            }
+        }
+        //Validacion para no colocar mas de una , (coma)
+        private bool ValidarComas(Control.ControlCollection ctrlCollection)
+        {
+            char myChar = ',';
+            int i = 0;
+            bool comas = false;
+            
+            foreach (Control ctrl in ctrlCollection)
+            {
+                if (ctrl is TextBoxBase)
+                {
+                    if (!comas)
+                    {
+                        foreach (char c in ctrl.Text)
+                        {
+                            if (c == myChar)
+                            {
+                                i++;
+                                if (i > 1)
+                                {
+                                    comas = true;
+                                    break;
+                                }
+
+                            }
+                        }
+                        i = 0;
+                    }
+                }
+            }
+            return comas;
         }
 
         //Botones de reportes
