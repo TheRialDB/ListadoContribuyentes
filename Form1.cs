@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,10 +23,9 @@ namespace ListadoContribuyentes
         const string REPORTE_5 = "Listado detallado de los contribuyentes que no pagaron ni realizaron un plan de pago";
         const string REPORTE_6 = "Informe de los contribuyentes que realizaron un plan de pago y pagaron la deuda, pero no lo hicieron en el primer trimestre";
         const string ERROR_FILA = "Elija que fila quiere borrar.";
-        const string DIRECCION_XML = @"C:\Users\Usuario\OneDrive\Escritorio\FACU\PROGRAMACIÓN\vs2022\ListadoContribuyentes\";
         const string ERROR_NCUENTA_EXISTE = "Número de cuenta existente";
         const string ERROR_COMAS = "No puede colocar más de una , (coma)";
-        
+        string path = "";
         public Form1()
         {
             InitializeComponent();
@@ -47,10 +47,16 @@ namespace ListadoContribuyentes
             dtContribuyentes.Columns.Add("Mes Pago");
             dtContribuyentes.Columns.Add("Plan de pago");
 
+            string a = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            var dir = Path.Combine(a, "ListadoContribuyentes");
+            if (!Directory.Exists(dir))
+                Directory.CreateDirectory(dir);
+            path = Path.Combine(dir, "DatosContribuyentes.xml");
+
             LeerDatos();
 
         }
-
+        
         //Boton para cargar contribuyentes en el Data Grid View.
         private void btnCargar_Click(object sender, EventArgs e)
         {
@@ -139,15 +145,15 @@ namespace ListadoContribuyentes
         //Guardamos los datos en un archivo xml.
         private void GuardarDatos()
         {
-            dtContribuyentes.WriteXml(DIRECCION_XML + "DatosContribuyentes.xml");
+            dtContribuyentes.WriteXml(path);
         }
 
         //Lee los datos ya cargados en el xml.
         private void LeerDatos()
         {
-            if (System.IO.File.Exists(DIRECCION_XML + "DatosContribuyentes.xml"))
+            if (System.IO.File.Exists(path))
             {
-                dtContribuyentes.ReadXml(DIRECCION_XML + "DatosContribuyentes.xml");
+                dtContribuyentes.ReadXml(path);
             }
         }
 
